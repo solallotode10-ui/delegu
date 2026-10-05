@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Élection Délégué - Solal Lotodé (5e)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        classicBlue: '#1d4ed8',
+                        lightBlue: '#eff6ff',
+                        accentYellow: '#f59e0b',
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Segoe UI', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .perspective-1000 { perspective: 1000px; }
+        .transform-style-3d { transform-style: preserve-3d; }
+        .backface-hidden { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+        .rotate-y-180 { transform: rotateY(180deg); }
+        .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+        body { background-color: #f1f5f9; color: #1e293b; overflow-x: hidden; }
+        .slide-transition { transition: all 0.4s ease-in-out; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between font-sans">
+
+    <!-- Header -->
+    <header class="w-full px-6 py-4 flex justify-between items-center bg-white border-b border-slate-200 shadow-sm sticky top-0 z-50">
+        <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-lg bg-classicBlue text-white flex items-center justify-center font-bold text-lg shadow">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div>
+                <h1 class="text-sm font-bold text-slate-900">Solal Lotodé</h1>
+                <p class="text-xs text-slate-500 font-semibold">Candidat Délégué 5e</p>
+            </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+            <span id="slide-counter" class="text-xs font-bold px-3 py-1.5 rounded-full bg-lightBlue text-classicBlue border border-blue-200">Slide 1 / 5</span>
+        </div>
+    </header>
+
+    <!-- Main Presentation Container -->
+    <main class="flex-grow flex items-center justify-center p-4 sm:p-8">
+        <div class="w-full max-w-5xl h-[580px] bg-white border border-slate-200 rounded-2xl shadow-xl p-6 sm:p-12 relative overflow-hidden flex flex-col justify-between">
+
+            <!-- SLIDE 1: Welcome -->
+            <div class="slide absolute inset-0 bg-classicBlue text-white p-8 sm:p-16 flex flex-col justify-center items-center text-center opacity-0 pointer-events-none slide-transition" data-slide="1">
+                <span class="px-4 py-1.5 rounded-md bg-accentYellow text-slate-900 font-bold text-xs uppercase tracking-wider mb-6 shadow">
+                    Élection Officielle • Classe de 5ème
+                </span>
+                <h2 class="text-4xl sm:text-6xl font-extrabold mb-4 tracking-tight">
+                    Solal Lotodé
+                </h2>
+                <p class="text-lg sm:text-2xl text-blue-100 max-w-2xl mx-auto font-medium mb-8 leading-relaxed">
+                    Votre voix, notre force au quotidien pour faire avancer la classe.
+                </p>
+                <div class="inline-flex items-center space-x-2 text-xs font-semibold text-blue-200 bg-blue-900/50 px-4 py-2 rounded-lg border border-blue-700">
+                    <i class="fa-solid fa-arrow-right text-accentYellow"></i>
+                    <span>Utilisez les boutons en bas ou les flèches du clavier pour naviguer</span>
+                </div>
+            </div>
+
+            <!-- SLIDE 2: Le Rôle -->
+            <div class="slide absolute inset-0 bg-white p-8 sm:p-12 flex flex-col justify-center opacity-0 pointer-events-none slide-transition" data-slide="2">
+                <div class="mb-8 border-b border-slate-100 pb-4">
+                    <span class="text-classicBlue text-xs font-bold uppercase tracking-wider">Vision du Mandat</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-1">Le Rôle de Délégué</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 shadow-sm">
+                        <div class="w-12 h-12 rounded-lg bg-lightBlue text-classicBlue flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-bridge"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Le Pont Essentiel</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Servir de passerelle solide et directe entre vous, les professeurs et l'équipe éducative pour régler les situations dans le dialogue.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 shadow-sm">
+                        <div class="w-12 h-12 rounded-lg bg-lightBlue text-classicBlue flex items-center justify-center text-xl mb-4 font-bold">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Sérénité &amp; Ambiance</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Maintenir une cohésion forte, veiller au respect mutuel et s'assurer que personne ne se sente exclu ou isolé dans la classe.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 3: Engagements (Flip Cards) -->
+            <div class="slide absolute inset-0 bg-white p-8 sm:p-12 flex flex-col justify-center opacity-0 pointer-events-none slide-transition" data-slide="3">
+                <div class="mb-6 flex justify-between items-end border-b border-slate-100 pb-4">
+                    <div>
+                        <span class="text-classicBlue text-xs font-bold uppercase tracking-wider">Programme</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-1">Mes 3 Engagements</h2>
+                    </div>
+                    <span class="text-xs font-semibold text-slate-500 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200 hidden sm:inline-block">
+                        <i class="fa-regular fa-hand-pointer text-classicBlue mr-1"></i> Clique sur les cartes pour voir les détails
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <!-- Card 1 -->
+                    <div class="flip-card cursor-pointer h-52 perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner relative w-full h-full text-center transition-transform duration-500 transform-style-3d">
+                            <div class="flip-card-front absolute inset-0 bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col items-center justify-center backface-hidden shadow-sm">
+                                <div class="w-10 h-10 rounded-full bg-lightBlue text-classicBlue flex items-center justify-center text-lg mb-2 font-bold">
+                                    <i class="fa-solid fa-ear-listen"></i>
+                                </div>
+                                <span class="text-xs font-bold text-classicBlue uppercase tracking-wider mb-1">Priorité 01</span>
+                                <h3 class="text-base font-bold text-slate-900">L'Écoute Active</h3>
+                                <p class="text-[11px] text-slate-400 mt-2">(Clique pour retourner)</p>
+                            </div>
+                            <div class="flip-card-back absolute inset-0 bg-classicBlue text-white rounded-xl p-5 flex flex-col items-center justify-center backface-hidden rotate-y-180 shadow-md">
+                                <h3 class="text-sm font-bold text-accentYellow mb-1">Point Régulier</h3>
+                                <p class="text-xs text-blue-100 leading-relaxed">
+                                    Je passerai vous voir avant chaque conseil de classe pour noter vos véritables besoins.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="flip-card cursor-pointer h-52 perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner relative w-full h-full text-center transition-transform duration-500 transform-style-3d">
+                            <div class="flip-card-front absolute inset-0 bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col items-center justify-center backface-hidden shadow-sm">
+                                <div class="w-10 h-10 rounded-full bg-lightBlue text-classicBlue flex items-center justify-center text-lg mb-2 font-bold">
+                                    <i class="fa-solid fa-hands-bound"></i>
+                                </div>
+                                <span class="text-xs font-bold text-classicBlue uppercase tracking-wider mb-1">Priorité 02</span>
+                                <h3 class="text-base font-bold text-slate-900">L'Entraide</h3>
+                                <p class="text-[11px] text-slate-400 mt-2">(Clique pour retourner)</p>
+                            </div>
+                            <div class="flip-card-back absolute inset-0 bg-classicBlue text-white rounded-xl p-5 flex flex-col items-center justify-center backface-hidden rotate-y-180 shadow-md">
+                                <h3 class="text-sm font-bold text-accentYellow mb-1">Soutien Mutuel</h3>
+                                <p class="text-xs text-blue-100 leading-relaxed">
+                                    Favoriser la solidarité entre élèves pour s'entraider dans les exercices et la vie du collège.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="flip-card cursor-pointer h-52 perspective-1000" onclick="this.classList.toggle('flipped')">
+                        <div class="flip-card-inner relative w-full h-full text-center transition-transform duration-500 transform-style-3d">
+                            <div class="flip-card-front absolute inset-0 bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col items-center justify-center backface-hidden shadow-sm">
+                                <div class="w-10 h-10 rounded-full bg-lightBlue text-classicBlue flex items-center justify-center text-lg mb-2 font-bold">
+                                    <i class="fa-solid fa-heart-pulse"></i>
+                                </div>
+                                <span class="text-xs font-bold text-classicBlue uppercase tracking-wider mb-1">Priorité 03</span>
+                                <h3 class="text-base font-bold text-slate-900">Le Bien-être</h3>
+                                <p class="text-[11px] text-slate-400 mt-2">(Clique pour retourner)</p>
+                            </div>
+                            <div class="flip-card-back absolute inset-0 bg-classicBlue text-white rounded-xl p-5 flex flex-col items-center justify-center backface-hidden rotate-y-180 shadow-md">
+                                <h3 class="text-sm font-bold text-accentYellow mb-1">Climat Serein</h3>
+                                <p class="text-xs text-blue-100 leading-relaxed">
+                                    Veiller à ce que l'ambiance reste positive pour que chacun se sente bien au collège.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 4: Méthode du Conseil -->
+            <div class="slide absolute inset-0 bg-white p-8 sm:p-12 flex flex-col justify-center opacity-0 pointer-events-none slide-transition" data-slide="4">
+                <div class="mb-8 border-b border-slate-100 pb-4">
+                    <span class="text-classicBlue text-xs font-bold uppercase tracking-wider">Méthode</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-1">Le Conseil en 3 Étapes</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 shadow-sm relative">
+                        <div class="text-3xl font-extrabold text-slate-200 absolute top-4 right-4">01</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2 flex items-center">
+                            <i class="fa-regular fa-clipboard text-classicBlue mr-2"></i> Préparation
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Recueil des avis et questions de toute la classe en amont du conseil.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 shadow-sm relative">
+                        <div class="text-3xl font-extrabold text-slate-200 absolute top-4 right-4">02</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2 flex items-center">
+                            <i class="fa-solid fa-comments text-classicBlue mr-2"></i> Participation
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Intervention active et constructive lors de la réunion avec les professeurs.
+                        </p>
+                    </div>
+
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-6 shadow-sm relative">
+                        <div class="text-3xl font-extrabold text-slate-200 absolute top-4 right-4">03</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2 flex items-center">
+                            <i class="fa-solid fa-bullhorn text-classicBlue mr-2"></i> Restitution
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Compte-rendu clair et transparent partagé avec vous après le conseil.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 5: Conclusion & Applause -->
+            <div class="slide absolute inset-0 bg-classicBlue text-white p-8 sm:p-16 flex flex-col justify-center items-center text-center opacity-0 pointer-events-none slide-transition" data-slide="5">
+                <div class="w-14 h-14 rounded-2xl bg-accentYellow text-slate-900 flex items-center justify-center text-2xl font-bold shadow-lg mb-4">
+                    <i class="fa-solid fa-check-to-slot"></i>
+                </div>
+                <h2 class="text-3xl sm:text-5xl font-extrabold mb-3">
+                    Votez Solal Lotodé !
+                </h2>
+                <p class="text-base sm:text-lg text-blue-100 max-w-xl mx-auto font-medium mb-6 leading-relaxed">
+                    Pour une classe unie, écoutée et active en 5ème. Du travail sérieux et constructif au service de tous !
+                </p>
+
+                <!-- Interactive Fixed Applause Button -->
+                <button onclick="playRealApplause()" class="px-6 py-3 bg-accentYellow hover:bg-amber-400 text-slate-900 font-bold rounded-xl shadow-lg flex items-center space-x-2 transition-transform transform active:scale-95 cursor-pointer">
+                    <i class="fa-solid fa-hands-clapping text-lg"></i>
+                    <span>Déclencher les applaudissements ! 👏</span>
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer Navigation -->
+    <footer class="w-full px-6 py-4 flex justify-between items-center bg-white border-t border-slate-200 shadow-sm">
+        <button id="prev-btn" onclick="prevSlide()" class="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-sm transition-all flex items-center space-x-2 border border-slate-200 disabled:opacity-30 disabled:cursor-not-allowed">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Précédent</span>
+        </button>
+
+        <div class="flex space-x-2" id="dots-container">
+            <!-- Dots generated dynamically via JS -->
+        </div>
+
+        <button id="next-btn" onclick="nextSlide()" class="px-5 py-2.5 rounded-xl bg-classicBlue hover:bg-blue-800 text-white font-bold text-sm transition-all flex items-center space-x-2 shadow-sm disabled:opacity-30 disabled:cursor-not-allowed">
+            <span>Suivant</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </footer>
+
+    <!-- Script Navigation & Sound Generator -->
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 5;
+
+        const slides = document.querySelectorAll('.slide');
+        const slideCounter = document.getElementById('slide-counter');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const dotsContainer = document.getElementById('dots-container');
+
+        for (let i = 1; i <= totalSlides; i++) {
+            const dot = document.createElement('button');
+            dot.className = `w-2.5 h-2.5 rounded-full transition-all ${i === 1 ? 'bg-classicBlue w-6' : 'bg-slate-300'}`;
+            dot.onclick = () => goToSlide(i);
+            dotsContainer.appendChild(dot);
+        }
+
+        const dots = dotsContainer.querySelectorAll('button');
+
+        function updateSlideView() {
+            slides.forEach((slide) => {
+                const slideNum = parseInt(slide.getAttribute('data-slide'));
+                if (slideNum === currentSlide) {
+                    slide.classList.remove('opacity-0', 'pointer-events-none');
+                    slide.classList.add('opacity-100', 'pointer-events-auto');
+                } else {
+                    slide.classList.add('opacity-0', 'pointer-events-none');
+                    slide.classList.remove('opacity-100', 'pointer-events-auto');
+                }
+            });
+
+            slideCounter.textContent = `Slide ${currentSlide} / ${totalSlides}`;
+            prevBtn.disabled = currentSlide === 1;
+            nextBtn.disabled = currentSlide === totalSlides;
+
+            dots.forEach((dot, index) => {
+                if (index + 1 === currentSlide) {
+                    dot.className = 'w-6 h-2.5 rounded-full bg-classicBlue transition-all';
+                } else {
+                    dot.className = 'w-2.5 h-2.5 rounded-full bg-slate-300 transition-all';
+                }
+            });
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                updateSlideView();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                updateSlideView();
+            }
+        }
+
+        function goToSlide(slideNum) {
+            currentSlide = slideNum;
+            updateSlideView();
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+
+        // REAL APPLAUSE SYNTHESIZER (Generates authentic hand clapping bursts via Web Audio API)
+        function playRealApplause() {
+            try {
+                const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                const numClaps = 50;
+                for (let i = 0; i < numClaps; i++) {
+                    const delay = Math.random() * 1.8;
+                    
+                    setTimeout(() => {
+                        if (audioCtx.state === 'suspended') {
+                            audioCtx.resume();
+                        }
+                        
+                        const bufferSize = audioCtx.sampleRate * 0.08;
+                        const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+                        const data = buffer.getChannelData(0);
+                        
+                        for (let j = 0; j < bufferSize; j++) {
+                            data[j] = (Math.random() * 2 - 1) * Math.exp(-j / (bufferSize * 0.3));
+                        }
+                        
+                        const noise = audioCtx.createBufferSource();
+                        noise.buffer = buffer;
+                        
+                        const filter = audioCtx.createBiquadFilter();
+                        filter.type = 'bandpass';
+                        filter.frequency.value = 1300 + Math.random() * 500;
+                        filter.Q.value = 1.2;
+                        
+                        const gain = audioCtx.createGain();
+                        const now = audioCtx.currentTime;
+                        
+                        const vol = 0.1 + Math.random() * 0.15;
+                        gain.gain.setValueAtTime(vol, now);
+                        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.07);
+                        
+                        noise.connect(filter);
+                        filter.connect(gain);
+                        gain.connect(audioCtx.destination);
+                        
+                        noise.start(now);
+                    }, delay * 1000);
+                }
+            } catch (err) {
+                console.log("Audio simulation blocked or not supported.");
+            }
+        }
+
+        updateSlideView();
+    </script>
+</body>
+</html>
